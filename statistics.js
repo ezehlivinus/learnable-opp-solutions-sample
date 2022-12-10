@@ -26,9 +26,9 @@ class Statistics {
       throw new Error('X must have at least one element')
     }
 
-    let cleanedX = []
+    let cleanedX = [] 
     for (let number of this.X) {
-      let x = Number(number)
+      let x = Number(number) // we want to make sure numbers are number, instead of a number string
       if (isNaN(x)) {
         throw new Error('All members of X must be a number', { cause: 'Some X are not number'})
       }
@@ -100,8 +100,8 @@ class DescriptiveStatistic extends Statistics {
     // Step 3:  check if the number of observations is even or odd
     if (this.isEven(n)) {
       // Step 3.1: If the number of observations is even use median formula: Median = [(n/2)th term + (n/2 + 1)th term]/2
-      let indexOfFirstMidValue = n / 2
-      let indexOfSecondMidValue = (n / 2) + 1
+      let indexOfFirstMidValue = n / 2 // index + 1
+      let indexOfSecondMidValue = (n / 2) + 1 // index + 1
 
       let firstMidNumber = sortedData[indexOfFirstMidValue - 1] // we subtract 1 because array are zero indexed
       let secondMidNumber = sortedData[indexOfSecondMidValue - 1]

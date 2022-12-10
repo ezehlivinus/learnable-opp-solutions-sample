@@ -35,9 +35,9 @@ class MovieStore {
   #rented;
   constructor(title) {
     this.title = title;
-    this.#movies = []
+    this.#movies = [] // list of movies in our store
     this.#rented = {
-      [randomUser.name]: []
+      [randomUser.name]: [] // we only have one user with random generate username as name
     }
   }
 
