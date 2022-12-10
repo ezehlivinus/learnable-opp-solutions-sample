@@ -14,6 +14,7 @@ class Statistics {
     this.X = X ? X : []; // if X has value use it otherwise make it empty array
   }
 
+  // Helps to validate and cleans X
   validate() {
     let xIsArray = Array.isArray(this.X)
     
